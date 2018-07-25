@@ -1,4 +1,4 @@
-package revisaopa;
+package revisaopa_univates;
 /**
  *
  * @author jonasdhein
