@@ -16,7 +16,7 @@ public class RevisaoPA_UNIVATES {
      */
     public static void main(String[] args) {
         System.out.println("OLÁ MUNDO");    
-        System.out.println("TESTE");
+        System.out.println("EDITADO NO GITHUB");
     }
     
 }
