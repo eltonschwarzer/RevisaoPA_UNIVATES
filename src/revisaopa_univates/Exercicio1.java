@@ -1,6 +1,12 @@
 package revisaopa_univates;
+
+import connection.ConnectionFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 /**
- *
+ *  Exercicio1: Simular uma transação entre contas bancárias, utilizando a classe Conta juntamente com as suas propriedades.
+ * 
  * @author jonasdhein
  */
 public class Exercicio1 {
