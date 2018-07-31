@@ -15,6 +15,7 @@ public class Exercicio1 {
     public static void main(String[] args){
         
         System.out.println("Início do sistema");
+        System.out.println("NETBEANS");
         
         Conta conta1 = new Conta();
         conta1.setConta(365);
