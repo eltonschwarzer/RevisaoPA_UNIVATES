@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 public class ConnectionFactory {
     
     private final static String DRIVER = "org.postgresql.Driver";
-    private final static String URL = "jdbc:postgresql://192.168.3.5:5432/ordensservico";
+    private final static String URL = "jdbc:postgresql://localhost:5432/univates";
     private final static String USER = "postgres";
     private final static String PASS = "abc123$";
     
