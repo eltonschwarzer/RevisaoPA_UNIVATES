@@ -92,9 +92,18 @@ public class Login extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         
         LoginController login = new LoginController();
-        Usuario user = login.Login(txtUsuario.getText().trim(), txtSenha.getText().trim());
-        if(user == null){
+        
+        String usuario = txtUsuario.getText().trim();//captura o usuario da tela
+        String senha = txtSenha.getPassword().toString();//captura a senha da tela
+        
+        Usuario user = login.Login(usuario, senha);
+        
+        if(user == null){ //verifica se a funcao conseguiu retornar um usuario valido
             System.out.println("Usuário não existe");
+        }else{ //caso o usuario de retorno seja válido, a tela principal abre
+            TelaPrincipal tela = new TelaPrincipal();
+            tela.setVisible(true);
+            this.setVisible(false);//fecha tela de login
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
 
