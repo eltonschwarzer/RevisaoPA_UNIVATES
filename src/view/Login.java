@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package revisaopa_univates;
+package view;
 
+import view.TelaPrincipal;
 import connection.ConnectionFactory;
 import controller.LoginController;
 import java.sql.Connection;
@@ -94,7 +95,7 @@ public class Login extends javax.swing.JFrame {
         LoginController login = new LoginController();
         
         String usuario = txtUsuario.getText().trim();//captura o usuario da tela
-        String senha = txtSenha.getPassword().toString();//captura a senha da tela
+        String senha = txtSenha.getText().toString();//captura a senha da tela
         
         Usuario user = login.Login(usuario, senha);
         

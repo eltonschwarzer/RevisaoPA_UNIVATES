@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package revisaopa_univates;
+package view;
 
 /**
  *
@@ -76,6 +76,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void menuProfessoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProfessoresActionPerformed
         // TODO add your handling code here:
+        AlunosView alunos = new AlunosView();
+        alunos.setVisible(true);
     }//GEN-LAST:event_menuProfessoresActionPerformed
 
     private void menuAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAlunosActionPerformed
