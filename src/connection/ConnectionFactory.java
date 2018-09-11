@@ -23,7 +23,7 @@ public class ConnectionFactory {
     private final static String DRIVER = "org.postgresql.Driver";
     private final static String URL = "jdbc:postgresql://localhost:5432/univates";
     private final static String USER = "postgres";
-    private final static String PASS = "postgres";
+    private final static String PASS = "abc123$";
     
     public static Connection con;
     public static Statement stmt;

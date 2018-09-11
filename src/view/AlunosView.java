@@ -6,6 +6,7 @@
 package view;
 
 import controller.AlunoController;
+import tools.Combos;
 
 /**
  *
@@ -16,14 +17,31 @@ public class AlunosView extends javax.swing.JFrame {
     /**
      * Creates new form ViewAlunos
      */
+    Combos cbCurso;
+    
     public AlunosView() {
         initComponents();
         
         //carregar os cursos existentes
         
         //carregar os alunos existentes
-        AlunoController alunoCon = new AlunoController(null, jtbAlunos);
-        alunoCon.PreencheAlunos();
+        try{
+            
+            AlunoController alunoCon = new AlunoController(null, jtbAlunos);
+            alunoCon.PreencheAlunos();
+            
+            cbCurso = new Combos();
+            cbCurso.PreencheCombo("SELECT cod_cur, nom_cur FROM cursos ORDER BY nom_cur");
+            
+            /*//Recuperando dados de uma ComboBox
+            Combos c = new Combos();
+            c =(Combos) cmbCidade.getSelectedItem();
+            int id_cidade = Integer.parseInt(c.getCodigo());
+            */
+            
+        }catch(Exception ex){
+            System.out.println("Erro ao atualizar os dados inicias da tela");
+        }
         
     }
 
@@ -64,6 +82,7 @@ public class AlunosView extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Nome");
 
@@ -104,7 +123,7 @@ public class AlunosView extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
